@@ -1,0 +1,12 @@
+---
+- name: Remove scheduled cron job
+  hosts: serverb
+  become: true
+  tasks:
+    - name: Crontab file exists
+      cron:
+        name: Add date and time to a file
+        user: student
+        cron_file: add-date-time
+        state: absent
+~                                     

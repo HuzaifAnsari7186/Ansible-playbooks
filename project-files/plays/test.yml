@@ -1,0 +1,10 @@
+---
+- name: Test web service
+  hosts: servera
+  become: no
+  tasks:
+    - name: connect to intranet web server
+      uri:
+        url: "{{ url }}"
+        state_code: 200
+

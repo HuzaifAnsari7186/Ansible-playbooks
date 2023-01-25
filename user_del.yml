@@ -1,0 +1,11 @@
+---
+- name: Configure important user consistently
+  hosts: serverb
+  tasks: 
+    - name: delete user patrick 
+      user: 
+        name: patrick 
+        uid: 1005
+        state: absent
+
+

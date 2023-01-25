@@ -1,0 +1,10 @@
+---
+- name: Configure important user consistently
+  hosts: serverb
+  tasks: 
+    - name: add user patrick 
+      user: 
+        name: patrick 
+        uid: 1005
+        state: present
+
